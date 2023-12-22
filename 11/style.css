@@ -45,7 +45,7 @@ h2{
 }
 
 
-button{
+.btn{
     background-color: #fff;
     border: 1px solid #e3e4e7;
     padding: .8em 1.7em;
@@ -53,3 +53,7 @@ button{
     color: #297ae9;
     border-radius: 5px;
 }
+
+
+
+/* ------------------login css ---------------------------------- */
