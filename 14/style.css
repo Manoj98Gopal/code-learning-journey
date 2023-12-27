@@ -10,7 +10,7 @@
   --fs-h1: 3.5rem;
   --fs-h2: 2.5rem;
   --fs-h3: 2rem;
-  --fs-h4: 1.7rem;
+  --fs-h4: 1.3rem;
   --fs-big-p: 1.3rem;
   --fs-small-p: 1rem;
 
@@ -36,61 +36,242 @@ nav {
   padding: 1em 0;
 }
 
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+}
 
-.nav-items{
+.nav-list {
+  flex-direction: column;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: var(--fs-small-p);
+  font-weight: 500;
+  gap: 1.5em;
+  display: none;
+}
+
+.active {
+  display: flex;
+  padding-top: 3em;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.nav-sign-up-btn {
+  background-color: var(--secondary-bg);
+  color: #fff;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+nav ul li:hover {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.hero {
+  padding: 1.5em 0;
+}
+
+.hambargur {
+  display: block;
+  cursor: pointer;
+}
+
+.hero-section {
+  background-color: var(--sami-dark-bg);
+  color: #fff;
+}
+
+.section-two {
+  background-color: #f2f1f2;
+}
+
+.footer-section {
+  background-color: var(--sami-dark-bg);
+}
+
+.dark-background {
+  background-color: var(--dark-bg);
+  padding: 2em 3em;
+}
+
+.dark-heading {
+  color: var(--secondary-bg);
+}
+
+.hero-heading {
+  font-size: var(--fs-h1);
+}
+
+.big-ptag-size {
+  font-size: var(--fs-big-p);
+  line-height: 1.4em;
+}
+
+.small-ptag-size {
+  font-size: var(--fs-small-p);
+  line-height: 1.4em;
+}
+
+.hero-content {
+  margin: 2em 0;
+}
+
+.hero-content button {
+  background-color: var(--secondary-bg);
+  color: #fff;
+  border: none;
+  padding: 0.5em 1.3em;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin: 0.7em 0 3em 0;
+  cursor: pointer;
+}
+
+.section-two-row {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 4em 2em;
+  gap: 2em;
+}
+
+h2 {
+  margin-bottom: 0.5em;
+}
+
+.section-three {
+  display: flex;
+  flex-direction: column;
+  padding: 3em 0;
+  gap: 2em;
+}
+
+.section-three-col-one p {
+  font-size: var(--fs-big-p);
+  line-height: 1.4em;
+}
+
+.image-wrraper img {
+  max-width: 100%;
+  margin: 3em 0;
+}
+
+.section-three-col-two {
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.footer-section h1 {
+  font-size: var(--fs-h2);
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: lightgray;
+}
+
+.row {
+  color: lightgray;
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 2em;
+}
+
+.heading-three {
+  font-size: var(--fs-h4);
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 850px) {
+  :root {
+    --fs-h1: 4rem;
+    --fs-h2: 3rem;
+    --fs-h3: 2.4rem;
+    --fs-h4: 1.3rem;
+    --fs-big-p: 1.5rem;
+    --fs-small-p: 1.3rem;
+  }
+
+  .hambargur {
+    display: none;
+  }
+
+  .nav-list,
+  .nav-list-ul,
+  .section-two-row,
+  .section-three-col-two {
     display: flex;
+    flex-direction: row;
+  }
+
+  .hero {
+    display: flex;
+    gap: 1.5em;
+    padding: 6em 0;
+    justify-content: space-between;
+  }
+
+  .hero-heading {
+    width: 40%;
+  }
+
+  .hero-content {
+    width: 50%;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .company-content {
+    width: 30%;
+  }
+}
+
+
+
+@media (min-width:1000px) {
+
+.section-three{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
 }
 
-.nav-list{
-    display: none;
+.section-three-col-two{
+    flex-direction: column;
+    width: 30%;
 }
 
-.hambargur{
-    display: block;
-    cursor: pointer;
+.section-three-col-one{
+    width: 60%;
 }
-
-.hero-section{
-    background-color: var(--sami-dark-bg);
-    color: #fff;
-}
-
-.section-two{
-    background-color: #f2f1f2;
-}
-
-.footer-section{
-    background-color: var(--sami-dark-bg);
-}
-
-.dark-background{
-    background-color: var(--dark-bg);
-}
-
-.dark-heading{
-    color: var(--secondary-bg);
-}
-
-.hero-heading{
-    font-size: var(--fs-h1);
-    padding:1.3em 0 1em 0
-}
-
-.hero-content p{
-    font-size: var(--fs-big-p);
-    line-height: 1.4em;
-}
-
-.hero-content button{
-    background-color: var(--secondary-bg);
-    color: #fff;
-    border: none;
-    padding: .5em 1.3em;
-    border-radius: 30px;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin: .7em 0 3em 0;
-    cursor: pointer;
+    
 }
