@@ -20,14 +20,13 @@ body {
 
 .card {
   width: 350px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  z-index: 1;
   cursor: pointer;
+  position: relative;
+  bottom: 130px;
 }
 
 .img-content p {
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 0.5em;
   color: #fff;
 }
@@ -35,7 +34,10 @@ body {
 .info-content {
   padding: 2em;
   background: #fff;
-  display: none;
+  /* transition: 2s; */
+  position: absolute;
+  width: 100%;
+  transition: 0.5s;
 }
 
 .code,
@@ -50,9 +52,16 @@ body {
   text-align: center;
   padding: 2em;
   background: #333233;
+  position: absolute;
+  transition: 1s;
+  width: 100%;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .card:hover .info-content {
+  transform: translatey(150px);
   display: block;
 }
 
@@ -64,6 +73,8 @@ body {
 
 .card:hover .img-content {
   background: #ff1e55;
+  transform: translatey(-88px);
+  box-shadow: none;
 }
 
 .info-content p {
@@ -80,8 +91,7 @@ a {
   color: #000;
 }
 
-
-a:hover{
-    background-color: #333233;
-    color: #fff;
+a:hover {
+  background-color: #333233;
+  color: #fff;
 }
