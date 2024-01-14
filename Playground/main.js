@@ -57,4 +57,52 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelector(".Kabbadi").addEventListener("click", kabbadi);
 
   document.querySelector(".cricket").addEventListener("click", cricket);
+
+
+  let image = document.querySelector('.imag-container img ')
+
+  let text = document.querySelector('.happy')
+
+
+  let move = () => {
+
+
+    if(image.classList.contains("rounded")){
+      image.classList.remove("rounded")
+
+    }else{
+      image.classList.add("rounded")
+
+    }
+
+
+  }
+
+  image.addEventListener("click",move)
+
+
+  const openDraw = () => {
+
+   let drawer = document.querySelector(".draw")
+
+    drawer.classList.toggle('open')
+  }
+
+
+  let drawbtn = document.querySelector(".draw-btn")
+
+  drawbtn.addEventListener('click',openDraw)
+
+
+
+
+  console.log("asd image list ===",image.classList)
+
+  console.log("text =====",text.innerHTML)
+
+  text.textContent = "changed text"
+
+  console.log("text =====",text.innerHTML)
+
+
 });
