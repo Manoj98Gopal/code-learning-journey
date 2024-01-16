@@ -105,4 +105,55 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("text =====",text.innerHTML)
 
 
+
+  // create dom element with the help of js
+
+  let myDiv = document.createElement('div')
+
+  let head = document.createElement('h1')
+  let head2 = document.createElement('h2')
+
+
+  head.innerHTML = "I am first Heading "
+
+  head2.innerHTML = "***********I am second Heading*********** "
+
+
+  myDiv.appendChild(head)
+
+ myDiv.insertAdjacentElement('beforeend',head2)
+
+
+  let r = document.querySelector('.addhere')
+
+  console.log("rrrr ===",r)
+
+    r.appendChild(myDiv)
+
+
+    let ulList = document.createElement('ul')
+    let li = document.createElement('li')
+    let li1 = document.createElement('li')
+    let li2 = document.createElement('li')
+    let li3 = document.createElement('li')
+
+
+    li.innerHTML = "two"
+    li1.innerHTML = "One"
+    li2.innerHTML = "Frour"
+    li3.innerHTML = "Three"
+
+    ulList.appendChild(li)
+    ulList.appendChild(li1)
+    ulList.appendChild(li2)
+    ulList.appendChild(li3)
+
+
+   
+
+
+
+
+    document.body.appendChild(ulList)
+
 });
