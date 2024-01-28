@@ -48,9 +48,6 @@ btns.forEach((data) => {
 });
 
 
-
-
-
 let book = document.querySelector(".book")
 
 
