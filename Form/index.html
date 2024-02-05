@@ -5,35 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Register Form</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer src="./main.js" ></script>
+
   </head>
   <body>
     <div class="container">
-      <form action="#">
+      <form action="#" id="form">
         <h1>Registration</h1>
         <div class="input-control">
           <label>Name</label>
           <input id="userName" type="text" name="user_name" />
-          <div class="error-message"></div>
+          <div class="error-message" id="userNameError"></div>
         </div>
         <div class="input-control">
           <label>Email</label>
           <input id="email" type="text" name="email" />
-          <div class="error-message"></div>
+          <div class="error-message" id="emailError"></div>
         </div>
         <div class="input-control">
           <label>Phone Number</label>
           <input id="phone" type="number" name="phone" />
-          <div class="error-message"></div>
+          <div class="error-message" id="phoneError"></div>
         </div>
         <div class="input-control">
           <label>Password</label>
           <input id="password" type="password" name="password" />
-          <div class="error-message"></div>
+          <div class="error-message" id="passwordError"></div>
         </div>
         <div class="input-control">
           <label>Re-Enter</label>
           <input id="re-password" type="password" name="re-password" />
-          <div class="error-message"></div>
+          <div class="error-message" id="re-passwordError"></div>
         </div>
         <div class="submit-btn">
           <button type="submit">Submit</button>
@@ -41,6 +43,5 @@
       </form>
     </div>
 
-    <script src="./main.js"></script>
   </body>
 </html>
