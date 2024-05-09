@@ -10,3 +10,9 @@
 h1{
     color: red;
 }
+
+.special{
+    margin: 20px;
+    padding: 10px;
+    border-radius: 8px;
+}
