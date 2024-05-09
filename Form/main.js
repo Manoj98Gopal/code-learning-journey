@@ -22,8 +22,9 @@ function submit(e) {
     data.rePassword = rePassword.value.trim();
 
     console.log(data);
+    alert("Form submitted successfully with the following details:\n\n" + JSON.stringify(data, null, 2));
   } else {
-    console.log("error is there in your form");
+    alert("Error in your form. Please check the highlighted fields.");
   }
 }
 
