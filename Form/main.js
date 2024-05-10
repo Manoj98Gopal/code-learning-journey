@@ -10,6 +10,8 @@ form.addEventListener("submit", submit);
 function submit(e) {
   e.preventDefault();
 
+  // console.log(e.currentTarget)
+
   const hasError = validateInputs();
 
   if (!hasError) {
@@ -22,11 +24,13 @@ function submit(e) {
     data.rePassword = rePassword.value.trim();
 
     console.log(data);
-    alert("Form submitted successfully with the following details:\n\n" + JSON.stringify(data, null, 2));
+    // alert("Form submitted successfully with the following details:\n\n" + JSON.stringify(data, null, 2));
   } else {
-    alert("Error in your form. Please check the highlighted fields.");
+    // alert("Error in your form. Please check the highlighted fields.");
   }
 }
+
+
 
 const setError = (id, message) => {
   const errorMessage = document.getElementById(`${id}`);
@@ -39,6 +43,8 @@ const setError = (id, message) => {
   errorMessage.innerHTML = message;
 };
 
+
+
 const setSuccess = (id) => {
   const errorMessage = document.getElementById(`${id}`);
   //access the sbling of errorMessage element
@@ -49,6 +55,9 @@ const setSuccess = (id) => {
 
   errorMessage.innerHTML = "";
 };
+
+
+
 
 const emailCheck = () => {
   let emailValue = email.value.trim();
@@ -64,6 +73,8 @@ const emailCheck = () => {
   }
 };
 
+
+
 const phoneNumberCheck = () => {
   let phoneValue = phone.value.trim();
 
@@ -78,6 +89,8 @@ const phoneNumberCheck = () => {
     return true;
   }
 };
+
+
 
 const reEnterPasswordCheck = () => {
   let passwordValue = password.value.trim();
@@ -95,6 +108,9 @@ const reEnterPasswordCheck = () => {
     setError("re-passwordError", "Re enter the password!");
   }
 };
+
+
+
 
 const validateInputs = () => {
   const userNameValue = userName.value.trim();
