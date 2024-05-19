@@ -1,0 +1,40 @@
+body {
+  background-color: #febf12;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.wrapper {
+  background-color: #fff;
+}
+
+.container {
+  width: 500px;
+  padding: 30px;
+  overflow: auto;
+  height: 75vh;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  padding: 20px;
+}
+
+button {
+  border: none;
+  padding: 0.6em 4em;
+  font-size: 22px;
+  font-weight: 500;
+  background-color: #ff2754;
+  color: #fff;
+  cursor: pointer;
+  transition:all 0.5s;
+}
+
+button[disabled] {
+  opacity: 0.1;
+}
