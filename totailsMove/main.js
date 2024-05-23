@@ -41,3 +41,18 @@ const handlingKey = (e) => {
 };
 
 window.addEventListener("keydown", handlingKey);
+
+const timeBomb = setTimeout(() => {
+  console.log("Time bomb is blast");
+}, 5000);
+
+let a = 0;
+const time = setInterval(() => {
+  a = a + 1;
+  console.log(a);
+}, 1000);
+
+window.addEventListener("click", () => {
+  clearTimeout(timeBomb);
+  clearInterval(time);
+});
