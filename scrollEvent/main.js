@@ -4,8 +4,8 @@ const container = document.querySelector(".container");
 button.disabled = true;
 
 const handleScroll = (e) => {
-  console.log(e.currentTarget.scrollTop);
-  console.log(e.currentTarget.scrollHeight);
+  // console.log(e.currentTarget.scrollTop);
+  // console.log(e.currentTarget.scrollHeight);
 };
 
 const handleObserve = (payload) => {
@@ -28,3 +28,16 @@ const watching = new IntersectionObserver(handleObserve, {
 watching.observe(container.lastElementChild);
 
 container.addEventListener("scroll", handleScroll);
+
+// const call = async () => {
+//   console.log("starting");
+//   const data = await new Promise((resove) => {
+//     setTimeout(() => {
+//       resove(5);x 
+//       console.log("calling the set");
+//     }, 5000);
+//   });
+//   console.log("ending");
+// };
+
+// call();
