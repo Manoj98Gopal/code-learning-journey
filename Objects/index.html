@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+    <style>
+      body {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="fname" value="Ram" />
+    <script>
+      const inputName = document.querySelector("[name=fname]");
+
+      console.log("name ===", inputName.value);
+
+      const person = {
+        name: "Manoj G",
+        age: 25,
+        sal: 35000,
+        college: {
+          name: "Seshadripuram College",
+          degree: "BCA",
+        },
+        greeting: function (data = "Hi") {
+          return `${data} ${this.name}`;
+        },
+        qqq: () => {
+          return "OOFFF Ram";
+        },
+      };
+
+      //for adding key and value to object , we have two types
+
+      //First type
+      person.gender = "Male";
+      //Second type
+      person["school"] = "Pavaman vidhyani kethana";
+
+      //accessing the first type
+      const collegeName = person.college.name;
+
+      //accessing the second type
+      const degree = person["college"]["degree"];
+
+      //updateing the value
+      person.college.degree = "BCOM";
+
+      //updateing the value
+      person["college"]["name"] = "Rangrav College";
+
+      console.log("person object ==", person.greeting());
+      console.log("college name ==", collegeName);
+      console.log("degree ==", degree);
+
+      const ch = person?.namew?.ram;
+
+      console.log("name ====", person.qqq());
+    </script>
+  </body>
+</html>
