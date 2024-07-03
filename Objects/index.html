@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Objects</title>
     <style>
-      body {
-        background: blue;
-      }
+      
     </style>
   </head>
   <body>
-    <input type="text" name="fname" value="Ram" />
+    <!-- <input type="text" name="fname" value="Ram" />/ -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
     <script>
       const inputName = document.querySelector("[name=fname]");
 
-      console.log("name ===", inputName.value);
+      console.log("name ===", inputName?.value);
 
       const person = {
         name: "Manoj G",
@@ -52,13 +51,34 @@
       //updateing the value
       person["college"]["name"] = "Rangrav College";
 
-      console.log("person object ==", person.greeting());
-      console.log("college name ==", collegeName);
-      console.log("degree ==", degree);
 
       const ch = person?.namew?.ram;
 
-      console.log("name ====", person.qqq());
+      const room = {
+        wood : "Table",
+        paint : "color",
+        tails : "Mazzak",
+        nest : {
+          ent : "Mobile",
+          oneMoreDeep : {
+            one : "this another level"
+          }
+        }
+      }
+      //const room1 = {...room}
+
+      //const room1 = JSON.parse(JSON.stringify(room))
+      const room1 = _.cloneDeep(room)
+
+
+     room1.nest.ent = "qqqq"
+     room1.nest.oneMoreDeep.one = "fffffffffffffffff"
+
+      console.log("room ====",room)
+      console.log("room1 ====",room1)
+
+
+
     </script>
   </body>
 </html>
