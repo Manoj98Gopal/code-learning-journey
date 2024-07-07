@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+    <style>
+      body{
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+      const arrRevers = [...arr].reverse();
+
+      //what is  the diffrence between mutation and immutable
+      //mutation means if assign any variable to another variable if you change in another variable , It will effect to original variable
+      //immutable means same thing but if you modify any thing two assing variable , It doesnt effect to original variables
+      //We have so many array methods  some are mutable some are immutable
+      // console.log(arrRevers);
+      // console.log(arr);
+
+      const name = ["manu", "prem", "varu", "Ram"];
+
+      //console.log("before array =", name);
+
+      //If you want to add an element at the last position in an array
+      const name1 = [...name, "parveen"];
+      //name.push("parveen");
+
+      //if you want to add an element at the first position in an array
+      const name2 = ["chandu", ...name];
+      //name.unshift("chandan kumar");
+
+      //if you want to add an element bewtween an array
+      const name3 = [...name.slice(0, 2), "Savan sir", ...name.slice(2)];
+
+      //if you want to remove an element from the an array
+      name.pop();
+
+      //console.log("After array =", name);
+      //console.log("After array3 =", name3);
+
+      //console.log("After array1 =", name1);
+      //console.log("After array2 =", name2);
+
+
+      //Array methods 
+      let array = [1,2,3,4,5]
+    
+      //add one or more elements to the end of an array
+      array.push(6,7)
+
+      //remove the last element from the array
+      array.pop()
+
+      //remove the first element from the array
+      array.shift()
+
+      //adds one or more elements to beginning of an array
+      array.unshift(0,7,7)
+
+      //adds or remove elements from array
+      let newArray = [1,2,3,4] 
+
+     // console.log("original array ==",newArray)
+      //adding
+       newArray.splice(1,0,7,7) //first 
+      //console.log("adding element into the array ==",newArray)
+      //replacing
+       newArray.splice(1,2,8,8)
+      //console.log("replacing element from the array ==",newArray)
+      //removing
+       newArray.splice(1,2)
+       //console.log("removing element from the array ==",newArray)
+
+
+       //taking a chunk of array form original array without effecting original array
+       let Array1 = [1,2,3,4,5,2]
+       let copyArray1 = Array1.slice(1,4)
+
+       //Marging two arrays 
+       let arr1 = [1,2,3]
+       let arr2 = [4,5,6]
+
+       let result = arr1.concat(arr2)
+
+       //If you pass an element, it will return its index number , if the value is not present in the array, it will retrun -1,
+       let indexvalue = Array1.indexOf(4)
+
+       //if duplicate value present in array, how to get last index of duplicate value 
+       let lindex = Array1.lastIndexOf(2)
+
+       //for each methos it use for iterating the values 
+       Array1.forEach(data => {console.log(data)})
+
+       //creating and modifying the array
+       const data = Array1.map((data) => data*2)
+
+       //filtering the array
+       const data1 = Array1.filter(data => data != 2)
+
+       //
+
+
+    </script>
+  </body>
+</html>
