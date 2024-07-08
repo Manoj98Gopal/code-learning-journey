@@ -12,7 +12,7 @@
   </head>
   <body>
     <script>
-      const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      const arr = [1, 2, 3, 4,44, 5, 6, 7, 8, 9];
 
       const arrRevers = [...arr].reverse();
 
@@ -95,7 +95,7 @@
        let lindex = Array1.lastIndexOf(2)
 
        //for each methos it use for iterating the values 
-       Array1.forEach(data => {console.log(data)})
+       //Array1.forEach(data => {console.log(data)})
 
        //creating and modifying the array
        const data = Array1.map((data) => data*2)
@@ -103,9 +103,44 @@
        //filtering the array
        const data1 = Array1.filter(data => data != 2)
 
-       //
+       // you can check condition for each element if it satisfy in one element  it restur true
+      const res = Array1.some(data => data ===13)
+
+      // it return true when all element satisfy condition true 
+      const res1 = Array1.every(data =>  data % 2 != 0)
 
 
+      //Returns the value of the first  element the array that satisfies profided function
+      const fi = Array1.find(data => data ===3) 
+
+      //finding the index if it is get  return index number other wise -1
+      const fin = arr.findIndex(data => data ===2)
+
+      //joing the any element between the numbers
+      const res2 = arr.join("+")
+
+      // Revers the array
+     const rver = arr.reverse()
+
+
+     const elements = [5,3,2,4,1]
+     const el = [...elements]
+
+     //sorting the array in acsending array
+     const sortAcen = elements.sort()
+
+     //sorting in array in decending array
+     const sortDcen = el.sort((a,b) => b - a)
+    
+
+     //if you want to fill any static value inside the array
+     const fill = elements.fill(10,0,3)
+
+     //if you want to copy any element iside  the array we can use copy method
+     const copy = el.copyWithin(1,2,1)
+
+
+     console.log(copy)
     </script>
-  </body>
+  </body!
 </html>
