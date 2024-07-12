@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array</title>
     <style>
-      body{
+      body {
         background-color: antiquewhite;
       }
     </style>
   </head>
   <body>
     <script>
-      const arr = [1, 2, 3, 4,44, 5, 6, 7, 8, 9];
+      const arr = [1, 2, 3, 4, 44, 5, 6, 7, 8, 9];
 
       const arrRevers = [...arr].reverse();
 
@@ -47,100 +47,190 @@
       //console.log("After array1 =", name1);
       //console.log("After array2 =", name2);
 
+      //Array methods
+      let array = [1, 2, 3, 4, 5];
 
-      //Array methods 
-      let array = [1,2,3,4,5]
-    
       //add one or more elements to the end of an array
-      array.push(6,7)
+      array.push(6, 7);
 
       //remove the last element from the array
-      array.pop()
+      array.pop();
 
       //remove the first element from the array
-      array.shift()
+      array.shift();
 
       //adds one or more elements to beginning of an array
-      array.unshift(0,7,7)
+      array.unshift(0, 7, 7);
 
       //adds or remove elements from array
-      let newArray = [1,2,3,4] 
+      let newArray = [1, 2, 3, 4];
 
-     // console.log("original array ==",newArray)
+      // console.log("original array ==",newArray)
       //adding
-       newArray.splice(1,0,7,7) //first 
+      newArray.splice(1, 0, 7, 7); //first
       //console.log("adding element into the array ==",newArray)
       //replacing
-       newArray.splice(1,2,8,8)
+      newArray.splice(1, 2, 8, 8);
       //console.log("replacing element from the array ==",newArray)
       //removing
-       newArray.splice(1,2)
-       //console.log("removing element from the array ==",newArray)
+      newArray.splice(1, 2);
+      //console.log("removing element from the array ==",newArray)
 
+      //taking a chunk of array form original array without effecting original array
+      let Array1 = [1, 2, 3, 4, 5, 2];
+      let copyArray1 = Array1.slice(1, 4);
 
-       //taking a chunk of array form original array without effecting original array
-       let Array1 = [1,2,3,4,5,2]
-       let copyArray1 = Array1.slice(1,4)
+      //Marging two arrays
+      let arr1 = [1, 2, 3];
+      let arr2 = [4, 5, 6];
 
-       //Marging two arrays 
-       let arr1 = [1,2,3]
-       let arr2 = [4,5,6]
+      let result = arr1.concat(arr2);
 
-       let result = arr1.concat(arr2)
+      //If you pass an element, it will return its index number , if the value is not present in the array, it will retrun -1,
+      let indexvalue = Array1.indexOf(4);
 
-       //If you pass an element, it will return its index number , if the value is not present in the array, it will retrun -1,
-       let indexvalue = Array1.indexOf(4)
+      //if duplicate value present in array, how to get last index of duplicate value
+      let lindex = Array1.lastIndexOf(2);
 
-       //if duplicate value present in array, how to get last index of duplicate value 
-       let lindex = Array1.lastIndexOf(2)
+      //for each methos it use for iterating the values
+      //Array1.forEach(data => {console.log(data)})
 
-       //for each methos it use for iterating the values 
-       //Array1.forEach(data => {console.log(data)})
+      //creating and modifying the array
+      const data = Array1.map((data) => data * 2);
 
-       //creating and modifying the array
-       const data = Array1.map((data) => data*2)
+      //filtering the array
+      const data1 = Array1.filter((data) => data != 2);
 
-       //filtering the array
-       const data1 = Array1.filter(data => data != 2)
+      // you can check condition for each element if it satisfy in one element  it restur true
+      const res = Array1.some((data) => data === 13);
 
-       // you can check condition for each element if it satisfy in one element  it restur true
-      const res = Array1.some(data => data ===13)
-
-      // it return true when all element satisfy condition true 
-      const res1 = Array1.every(data =>  data % 2 != 0)
-
+      // it return true when all element satisfy condition true
+      const res1 = Array1.every((data) => data % 2 != 0);
 
       //Returns the value of the first  element the array that satisfies profided function
-      const fi = Array1.find(data => data ===3) 
-      
+      const fi = Array1.find((data) => data === 3);
+
       //finding the index if it is get  return index number other wise -1
-      const fin = arr.findIndex(data => data ===2)
+      const fin = arr.findIndex((data) => data === 2);
 
       //joing the any element between the numbers
-      const res2 = arr.join("+")
+      const res2 = arr.join("+");
 
       // Revers the array
-     const rver = arr.reverse()
+      const rver = arr.reverse();
 
+      const elements = [5, 3, 2, 4, 1];
+      const el = [...elements];
 
-     const elements = [5,3,2,4,1]
-     const el = [...elements]
+      //sorting the array in acsending array
+      const sortAcen = elements.sort();
 
-     //sorting the array in acsending array
-     const sortAcen = elements.sort()
+      //sorting in array in decending array
+      const sortDcen = el.sort((a, b) => b - a);
 
-     //sorting in array in decending array
-     const sortDcen = el.sort((a,b) => b - a)
-    
+      //if you want to fill any static value inside the array
+      const fill = elements.fill(10, 0, 3);
 
-     //if you want to fill any static value inside the array
-     const fill = elements.fill(10,0,3)
+      //if you want to copy any element iside  the array we can use copy method
+      const copy = el.copyWithin(1, 2, 1);
 
-     //if you want to copy any element iside  the array we can use copy method
-     const copy = el.copyWithin(1,2,1)
+      const people = [
+        {
+          id: 1,
+          name: "John Doe",
+          age: 30,
+          email: "john.doe@example.com",
+          address: {
+            street: "123 Main St",
+            city: "Springfield",
+            state: "IL",
+            zip: "62701",
+          },
+        },
+        {
+          id: 2,
+          name: "Jane Smith",
+          age: 25,
+          email: "jane.smith@example.com",
+          address: {
+            street: "456 Elm St",
+            city: "Shelbyville",
+            state: "IL",
+            zip: "62702",
+          },
+        },
+        {
+          id: 3,
+          name: "Emily Johnson",
+          age: 35,
+          email: "emily.johnson@example.com",
+          address: {
+            street: "789 Oak St",
+            city: "Capital City",
+            state: "IL",
+            zip: "62703",
+          },
+        },
+        {
+          id: 4,
+          name: "Michael Brown",
+          age: 40,
+          email: "michael.brown@example.com",
+          address: {
+            street: "101 Maple St",
+            city: "Ogdenville",
+            state: "IL",
+            zip: "62704",
+          },
+        },
+        {
+          id: 5,
+          name: "Sarah Davis",
+          age: 28,
+          email: "sarah.davis@example.com",
+          address: {
+            street: "202 Pine St",
+            city: "North Haverbrook",
+            state: "IL",
+            zip: "62705",
+          },
+        },
+      ];
 
+      const numbers = [12, 13, 14, 15, 16, 17, 18];
 
-     console.log(copy)
+      numbers.forEach((data, idx, nums) => {
+        //get previes value
+        if (nums[idx - 1]) {
+          console.log("previous value ", nums[idx - 1]);
+        }
+
+        //get current value
+        console.log("current value ", data);
+
+        //get next value
+        if (nums[idx + 1]) {
+          console.log("next value ", nums[idx + 1]);
+        }
+
+        //get last value
+        console.log("last index ===", nums[nums.length - 1]);
+      });
+
+      console.clear();
+
+      const findByProp = (prop, propWeAreLooking) => {
+        return function isCandidate(people) {
+          people[prop] === propWeAreLooking;
+        };
+      };
+
+      const candidates = people.filter((data) => data.id === 3);
+
+      const candidate = people.find(findByProp("id",2));
+
+      console.log(candidates);
+      console.log(candidate);
     </script>
-  </body!
+  </body>
 </html>
