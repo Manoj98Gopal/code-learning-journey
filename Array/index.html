@@ -219,18 +219,24 @@
 
       console.clear();
 
-      const findByProp = (prop, propWeAreLooking) => {
-        return function isCandidate(people) {
-          people[prop] === propWeAreLooking;
+      const find_by_id = (key, value) => {
+        return function finddata(people) {
+          return people[key] === value;
         };
       };
 
-      const candidates = people.filter((data) => data.id === 3);
+      const getPeopleData = (key, value) => {
+        const candidate = people.find(find_by_id(key, value));
+        return candidate;
+      };
 
-      const candidate = people.find(findByProp("id",2));
+      console.log("find ===", getPeopleData("age", 40));
 
-      console.log(candidates);
-      console.log(candidate);
+      console.clear()
+
+
+
+      
     </script>
   </body>
 </html>
