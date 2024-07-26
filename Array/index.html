@@ -232,11 +232,89 @@
 
       console.log("find ===", getPeopleData("age", 40));
 
-      console.clear()
+      console.clear();
 
+      //Reduce method
 
+      const scores = [34, 23, 67, 27, 36, 89, 13, 56, 67, 43];
 
-      
+      const scoreResult = scores.reduce((acc, cur) => (acc = acc + cur), 0);
+
+      console.log(scoreResult);
+
+      const products = [
+        { id: 1, name: "Laptop", category: "Electronics", price: 1200 },
+        { id: 2, name: "Phone", category: "Electronics", price: 800 },
+        { id: 3, name: "Shirt", category: "Apparel", price: 50 },
+        { id: 4, name: "Shoes", category: "Apparel", price: 120 },
+        { id: 5, name: "Headphones", category: "Electronics", price: 150 },
+      ];
+
+      const count = products.reduce((acc, cur) => {
+        if (!acc[cur.category]) {
+          acc[cur.category] = 0;
+        }
+        acc[cur.category] += cur.price;
+
+        return acc;
+      }, {});
+
+      console.log("Total count of category wise ===", count);
+
+      //Calculate the total price of all products combined.
+      const totalCount = products.reduce((acc, cur) => (acc += cur.price), 0);
+      console.log("Total amount of products ===", totalCount);
+
+      //Group products by their category.
+      const grpByProd = products.reduce((acc, cur) => {
+        if (!acc[cur.category]) {
+          acc[cur.category] = [];
+        }
+
+        acc[cur.category].push(cur.name);
+
+        return acc;
+      }, {});
+
+      console.clear();
+
+      const peoples = [
+        { name: "Alice", age: 25, city: "New York", salary: 50000 },
+        { name: "Bob", age: 30, city: "San Francisco", salary: 60000 },
+        { name: "Charlie", age: 85, city: "Los Angeles", salary: 70000 },
+        { name: "David", age: 40, city: "Chicago", salary: 80000 },
+        { name: "Eve", age: 45, city: "New York", salary: 90000 },
+      ];
+
+      //Calculate the total sum of ages of all people in the array.
+      const totalSumAge = peoples.reduce((acc, cur) => {
+        return (acc += cur.age);
+      }, 0);
+
+      //Calculate the average salary of all people in the array
+      const avgSalary = peoples.reduce((acc, cur, idx, array) => {
+        return (acc += cur.salary / array.length);
+      }, 0);
+
+      //Create an object that counts how many people live in each city.
+      const countBycity = peoples.reduce((acc, cur) => {
+        acc[cur.city] = (acc[cur.city] || 0) + 1;
+        return acc;
+      }, {});
+
+      //Find the oldest person in the array.
+      const oldestPerson = peoples.reduce((acc, cur) => {
+        //if (!acc.age) {
+        //   acc = cur;
+        // }
+        // if (cur.age > acc.age) {
+        //   acc = cur;
+        //  }
+        //return acc;
+        return (acc.age || 0) > cur.age ? acc : cur;
+      }, {});
+
+      console.log("result ===", oldestPerson);
     </script>
   </body>
 </html>
